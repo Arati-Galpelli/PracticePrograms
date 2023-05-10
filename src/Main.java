@@ -1,24 +1,39 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter an Year :");
-        int year = sc.nextInt();
-        int res = isLeap(year);
-        if(year>=1585) {
-            if (res == 1)
-                System.out.println("Given year is leap year");
-            else
-                System.out.println("Given year is not leap year");
-        }
-        else
-            System.out.println("Invalid Year");
-
-    }
-    static int isLeap(int y) {
-        if (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0))
-            return 1;
-        else
-            return 0;
+        public static void main(String[] args) {
+            int ch;
+            do {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("1.Addition:\n 2.Subtraction:\n 3.Multiplication:\n 4.Division: ");
+                System.out.println("Enter your Choice...");
+                int n = sc.nextInt();
+                System.out.println("Enter first number :");
+                int num1 = sc.nextInt();
+                System.out.println("Enter second number :");
+                int num2 = sc.nextInt();
+                switch (n) {
+                    case 1:
+                        int num3 = num1 + num2;
+                        System.out.println("Addition of two numbers is :" + num3);
+                        break;
+                    case 2:
+                        int num4 = num1 - num2;
+                        System.out.println("Subtraction of two numbers is :" + num4);
+                        break;
+                    case 3:
+                        int num5 = num1 * num2;
+                        System.out.println("Multiplication of two numbers is :" + num5);
+                        break;
+                    case 4:
+                        int num6 = num1 / num2;
+                        System.out.println("Division of two numbers is :" + num6);
+                        break;
+                    default:
+                        System.out.println("Invalid Choice..");
+                }
+                System.out.println("Do you want to continue?1.Yes/2.No");
+                ch=sc.nextInt();
+            } while (ch==1);
     }
 }
