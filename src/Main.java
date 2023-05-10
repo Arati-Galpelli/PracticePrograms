@@ -1,11 +1,22 @@
-import java.util.Scanner;
-
 public class Main {
+    static String var1;  //static variable initialization
+    static int var2;
+
+    //static block
+    static {
+        System.out.println("Inside Static Block");
+        var1 = "arati";
+        var2 = 20;
+    }
+
+    //static method
+    static void display() {
+        System.out.println("Inside Static method...");
+        System.out.println(var1);
+        System.out.println(var2);
+    }
+
     public static void main(String[] args) {
-        public static void main(String[] args) {
-            System.out.println("My first name is : "+args[0]);
-            System.out.println("My Middle name is : "+args[1]);
-            System.out.println("My Last name is : "+args[2]);
-            System.out.println("My name is : "+args[0]+" "+args[1]+" "+args[2]);
+            display();
         }
     }
