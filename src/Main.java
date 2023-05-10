@@ -2,17 +2,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter first string : ");
-        String str1 = sc.nextLine();
-        System.out.print("Enter second string : ");
-        String str2 = sc.nextLine();
-        compareString(str1,str2);
-    }
-    static void compareString(String s1,String s2){
-        if(s1.equals(s2))
-            System.out.println("Both strings are equal");
-        else
-            System.out.println("Strings are not equal");
+        int sum = 0;
+        System.out.println("Command line arguments");
+        for(int i=0;i<args.length;i++){
+            System.out.println(args[i]);
+            sum = sum + Integer.parseInt(args[i]);
+        }
+        System.out.println("Sum of integer numbers:" + sum);
         }
     }
